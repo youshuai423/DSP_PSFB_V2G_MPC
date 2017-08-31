@@ -31,12 +31,12 @@ void InitECAP()
 	ECap2Regs.ECCTL2.bit.SYNCI_EN = 1; // Enable sync in
 	ECap2Regs.ECCTL2.bit.SYNCO_SEL = 0; // Enable sync out
 
-	// ECAP module 3 config
+	// ECAP module 3 —— 缓冲开关信号
 	ECap3Regs.ECCTL2.bit.CAP_APWM = 1;
 	ECap3Regs.CAP1 = 0.5 * DABperiod; // Set period value
-	ECap3Regs.CAP2 = 0.5 * DABperiod - PhaSft - 200; // Set Duty cycle
-	ECap3Regs.CTRPHS = 0.5 * DABperiod - PhaSft - 200; //
-	ECap3Regs.ECCTL2.bit.APWMPOL = 0;
+	ECap3Regs.CAP2 = PhaSft + 150 * 5; // Set Duty cycle
+	ECap3Regs.CTRPHS = 0; //
+	ECap3Regs.ECCTL2.bit.APWMPOL = 1;  // 反极性
 	ECap3Regs.ECCTL2.bit.SYNCI_EN = 1; // Enable sync in
 	ECap3Regs.ECCTL2.bit.SYNCO_SEL = 2; // Disable sync out
 

@@ -1,7 +1,7 @@
 /******************************************************************************
 | includes                          
 |----------------------------------------------------------------------------*/
-#include "DABcontrol.h"
+#include "PSFB_Control.h"
 
 /******************************************************************************
 | local variable definitions                          
@@ -29,8 +29,8 @@ extern double Ub_cmd = 0;
 extern double Uc_cmd = 0;
 
   // µçÁ÷
-extern double IgRefRatio = 0.09;
-extern double IabcRefRatio = 0.015;
+extern double IgRefRatio = 0.06;
+extern double IabcRefRatio = 0.02;
 extern double Ig_cmd = 0;
 extern double Ia_cmd = 0;
 extern double Ib_cmd = 0;
